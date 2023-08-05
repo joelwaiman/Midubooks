@@ -1,0 +1,20 @@
+.article{
+    gap: 1rem;
+}
+
+.ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.book{
+    list-style: none;
+    padding: 7px 0;
+}
+
+.img{
+    max-width: 250px;
+    aspect-ratio: 9/14;
+}

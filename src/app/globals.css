@@ -2,6 +2,12 @@
   color-scheme: dark;
 }
 
+nav{
+  font-family: American Captain;
+  padding: 0 4px;
+  font-size: x-large;
+}
+
 main {
   display: grid;
   grid-template-rows: 60px 1fr 60px;
@@ -9,4 +15,12 @@ main {
   min-height: 80vh;
   max-width: 80%;
   margin: auto;
+  font-family: Roboto;
+}
+
+footer{
+  display: flex;
+  font-family: Caviar Dreams;
+  justify-content: center;
+  align-items: center;
 }
