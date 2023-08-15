@@ -5,9 +5,11 @@ import data from '../books.json'
 import styles from './page.module.css'
 
 const books = data.library.map((data) => data.book)
+const genres = Array.from(new Set(books.map((book) => book.genre)));
 
 export default function Home() {
   const [genre, setGenre] = useState('')
+  const [readList, setReadList] = useState([])
 
   const matches = genre ? books.filter((book)=>{
     if(genre && book.genre != genre){
@@ -17,23 +19,28 @@ export default function Home() {
     }
   }) : books;
 
+  function handleBookClick(book){
+    setReadList((readList)=> readList.includes(book)
+    ? readList.filter((readBook) => readBook !== book)
+    : [...readList, book]) 
+  }
+
   return (
     <article  className={styles.article}>
-      <select value={genre} onChange={(e)=> setGenre(e.target.value)}>
+      <select className={styles.select} value={genre} onChange={(e)=> setGenre(e.target.value)}>
         <option value=''>Todos los generos</option>
-        <option value='Fantasía'>Fantasia</option>
-        <option value='Ciencia ficción'>Ciencia ficción</option>
-        <option value='Zombies'>Zombies</option>
-        <option value='Terror'>Terror</option>
+        {genres.map((genre)=>{
+          return <option key={genre} value={genre}>{genre}</option>
+        })}
       </select>
       <ul className={styles.ul}>
         {matches.map((book) => {
-          return <li className={styles.book} key={book.ISBN}>
+          return <li className={styles.book} onClick={()=> handleBookClick(book.ISBN)} key={book.ISBN}>
             <img className={styles.img}
               alt={book.title}
               src={book.cover}>
             </img>
-            <p>{book.title}</p>
+            <p className={readList.includes(book.ISBN) && styles.fav}>{book.title}</p>
           </li>
         })}
       </ul>

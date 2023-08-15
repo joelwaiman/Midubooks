@@ -2,19 +2,59 @@
     gap: 1rem;
 }
 
+.select{
+    background-color: #222831;
+    border: none;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    padding: 10px;
+}
+
 .ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .book{
+    scale: 1;
     list-style: none;
-    padding: 7px 0;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
+
+.book:hover{
+    scale: 1.1;
+    transition: 0.3s ease;
+    }
 
 .img{
     max-width: 250px;
     aspect-ratio: 9/14;
+    border-radius: 10px;
+    box-shadow: -13px -13px 25px #222831;
+
+}
+.book p{
+    text-align: center;
+    opacity: 0.8;
+    max-width: 95%;
+    max-height: 100%;
+    background-color: #222831;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.book .fav {
+    opacity: 1;
+    background-color: #865DFF;
+    transition: all 0.3s ease-out;
+  }
+
+.fav:hover{
+    box-shadow: 0 0 35px #865DFF;
+    
+    transition: all 0.3s ease;
 }
