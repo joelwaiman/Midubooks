@@ -11,7 +11,7 @@ nav{
 
 main {
   display: grid;
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: 60px 120px 1fr 60px;
   gap: 10px;
   min-height: 80vh;
   max-width: 80%;

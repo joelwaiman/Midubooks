@@ -1,0 +1,29 @@
+.menu{
+    border-image: linear-gradient(60deg, #FFA3FD, #865DFF) 1;
+    border-bottom: 1px solid;
+    margin: 0 0 3%;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-family: Roboto;
+    font-weight: 300;
+    list-style: none;
+    padding: 0;
+}
+
+.anchor{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.anchor:hover{
+    text-shadow: 0 0 35px white,
+    0 0 45px white,
+    0 0 65px white;
+    transition: all 0.3s ease;
+}

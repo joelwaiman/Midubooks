@@ -53,8 +53,8 @@
     transition: all 0.3s ease-out;
   }
 
-.fav:hover{
-    box-shadow: 0 0 35px #865DFF;
-    
+.book p:hover{
+    box-shadow: inset 0 0 15px #865DFF,
+    0 0 35px #865DFF;
     transition: all 0.3s ease;
 }

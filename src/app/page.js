@@ -11,31 +11,31 @@ export default function Home() {
   const [genre, setGenre] = useState('')
   const [readList, setReadList] = useState([])
 
-  const matches = genre ? books.filter((book)=>{
-    if(genre && book.genre != genre){
+  const matches = genre ? books.filter((book) => {
+    if (genre && book.genre != genre) {
       return false
-    }else{
+    } else {
       return true
     }
   }) : books;
 
-  function handleBookClick(book){
-    setReadList((readList)=> readList.includes(book)
-    ? readList.filter((readBook) => readBook !== book)
-    : [...readList, book]) 
+  function handleBookClick(book) {
+    setReadList((readList) => readList.includes(book)
+      ? readList.filter((readBook) => readBook !== book)
+      : [...readList, book])
   }
 
   return (
-    <article  className={styles.article}>
-      <select className={styles.select} value={genre} onChange={(e)=> setGenre(e.target.value)}>
+    <article className={styles.article}>
+      <select className={styles.select} value={genre} onChange={(e) => setGenre(e.target.value)}>
         <option value=''>Todos los generos</option>
-        {genres.map((genre)=>{
+        {genres.map((genre) => {
           return <option key={genre} value={genre}>{genre}</option>
         })}
       </select>
       <ul className={styles.ul}>
         {matches.map((book) => {
-          return <li className={styles.book} onClick={()=> handleBookClick(book.ISBN)} key={book.ISBN}>
+          return <li className={styles.book} onClick={() => handleBookClick(book.ISBN)} key={book.ISBN}>
             <img className={styles.img}
               alt={book.title}
               src={book.cover}>

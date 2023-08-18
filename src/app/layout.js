@@ -1,3 +1,4 @@
+import { Navigation } from './components/Navigation'
 import './globals.css'
 
 export const metadata = {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
         <main>
           <nav>📚MiduBooks</nav>
+          <Navigation/>
           <section>{children}</section>
           <footer>Joel Waiman 🧡</footer>
         </main>
