@@ -8,8 +8,6 @@ export function ReadListProvider({ children }) {
   const [readList, setReadList] = useState([]);
   const [genre, setGenre] = useState('');
 
-  console.log(readList.ISBN);
-
   return (
     <ReadListContext.Provider value={{ readList, setReadList, genre, setGenre }}>
       {children}

@@ -24,6 +24,8 @@ export default function Home() {
       : [...readList, book])
   }
 
+  console.log(readList);
+
   return (
     <article className={styles.article}>
       <select className={styles.select} value={genre} onChange={(e) => setGenre(e.target.value)}>
@@ -34,12 +36,12 @@ export default function Home() {
       </select>
       <ul className={styles.ul}>
         {matches.map((book) => {
-          return <li className={styles.book} onClick={() => handleBookClick(book.ISBN)} key={book.ISBN}>
+          return <li className={styles.book} onClick={() => handleBookClick(book)} key={book.ISBN}>
             <img className={styles.img}
               alt={book.title}
               src={book.cover}>
             </img>
-            <p className={readList.includes(book.ISBN) && styles.fav}>{book.title}</p>
+            <p className={readList.includes(book) && styles.fav}>{book.title}</p>
           </li>
         })}
       </ul>

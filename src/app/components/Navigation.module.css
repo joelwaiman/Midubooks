@@ -23,7 +23,7 @@
 
 .anchor:hover{
     text-shadow: 0 0 35px white,
-    0 0 45px white,
-    0 0 65px white;
+    0 0 45px #FFA3FD,
+    0 0 65px #FFA3FD;
     transition: all 0.3s ease;
 }

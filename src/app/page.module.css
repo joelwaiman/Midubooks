@@ -1,5 +1,6 @@
 .article{
     gap: 1rem;
+    animation: .5s delayAnimation;
 }
 
 .select{
@@ -13,7 +14,7 @@
 .ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 16px;
 }
 
@@ -57,4 +58,13 @@
     box-shadow: inset 0 0 15px #865DFF,
     0 0 35px #865DFF;
     transition: all 0.3s ease;
+}
+
+@keyframes delayAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

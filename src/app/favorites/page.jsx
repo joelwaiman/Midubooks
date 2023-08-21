@@ -8,6 +8,18 @@ export default function Favorites(){
     const {readList} = useReadList();
 
     return(
-        <h1 className={styles.title}>{readList}</h1>
+        <article className={styles.article}>
+      <ul className={styles.ul}>
+        {readList.map((book) => {
+          return <li className={styles.book} key={book.ISBN}>
+            <img className={styles.img}
+              alt={book.title}
+              src={book.cover}>
+            </img>
+            <p className={styles.fav}>{book.title}</p>
+          </li>
+        })}
+      </ul>
+    </article>
     )
 }

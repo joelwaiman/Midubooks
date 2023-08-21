@@ -1,9 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   background-image: radial-gradient(#222831, #393E46);
   color-scheme: dark;
 }
 
-nav{
+nav {
   font-family: American Captain;
   padding: 0 4px;
   font-size: x-large;
@@ -19,7 +24,7 @@ main {
   font-family: Roboto;
 }
 
-footer{
+footer {
   display: flex;
   font-family: Caviar Dreams;
   justify-content: center;
