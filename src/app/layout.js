@@ -1,3 +1,4 @@
+import { ReadListProvider } from './ContextAPI'
 import { Navigation } from './components/Navigation'
 import './globals.css'
 
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
         <main>
           <nav>📚MiduBooks</nav>
           <Navigation/>
-          <section>{children}</section>
+          <ReadListProvider>{children}</ReadListProvider>
           <footer>Joel Waiman 🧡</footer>
         </main>
       </body>

@@ -12,6 +12,7 @@ const links = [{
 
 
 export function Navigation() {
+
     return (
         <nav className={styles.menu}>
             <ul className={styles.navigation}>
