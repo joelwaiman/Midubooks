@@ -1,6 +1,14 @@
 .article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     animation: .5s delayAnimation;
+}
+
+.article h1 {
+    font-size: 32px;
+    opacity: 0.5;
 }
 
 .ul{
@@ -11,6 +19,7 @@
 }
 
 .book{
+    text-align: center;
     scale: 1;
     list-style: none;
     margin: 10px 0;
@@ -36,6 +45,7 @@
     max-width: 95%;
     max-height: 100%;
     background-color: #222831;
+    margin: 10px 0;
     padding: 10px 5px;
     border-radius: 10px;
 }
@@ -50,6 +60,23 @@
     box-shadow: inset 0 0 15px #865DFF,
     0 0 35px #865DFF;
     transition: all 0.3s ease;
+}
+
+.button{
+    font-size: large;
+    opacity: 0.6;
+    margin: 1rem;
+    background-color: gray;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.button:hover{
+    opacity: 1;
+    background-color: #ED2B2A;
+    transition: all 0.2s;
 }
 
 @keyframes delayAnimation {

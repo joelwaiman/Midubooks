@@ -3,12 +3,15 @@
 import { useReadList } from './ContextAPI'
 import data from '../books.json'
 import styles from './page.module.css'
+import { useState } from 'react'
 
 const books = data.library.map((data) => data.book)
 const genres = Array.from(new Set(books.map((book) => book.genre)));
 
 export default function Home() {
-  const {readList, setReadList, genre, setGenre} = useReadList();
+  const { readList, setReadList, genre, setGenre } = useReadList();
+
+  const [inputValue, setInputValue] = useState('')
 
   const matches = genre ? books.filter((book) => {
     if (genre && book.genre != genre) {
@@ -24,10 +27,19 @@ export default function Home() {
       : [...readList, book])
   }
 
-  console.log(readList);
+
+  const catchInput = (e) => {
+    const { value } = e.target;
+    setInputValue(value)
+    console.log(inputValue);
+}
+  
 
   return (
     <article className={styles.article}>
+      {/* <span>
+        <input value={inputValue} onChange={catchInput} placeholder='Que buscas?' className={styles.input} />
+      </span> */}
       <select className={styles.select} value={genre} onChange={(e) => setGenre(e.target.value)}>
         <option value=''>Todos los generos</option>
         {genres.map((genre) => {
