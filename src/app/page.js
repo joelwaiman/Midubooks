@@ -26,20 +26,10 @@ export default function Home() {
       ? readList.filter((readBook) => readBook !== book)
       : [...readList, book])
   }
-
-
-  const catchInput = (e) => {
-    const { value } = e.target;
-    setInputValue(value)
-    console.log(inputValue);
-}
   
 
   return (
     <article className={styles.article}>
-      {/* <span>
-        <input value={inputValue} onChange={catchInput} placeholder='Que buscas?' className={styles.input} />
-      </span> */}
       <select className={styles.select} value={genre} onChange={(e) => setGenre(e.target.value)}>
         <option value=''>Todos los generos</option>
         {genres.map((genre) => {
