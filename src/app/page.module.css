@@ -84,3 +84,9 @@
         opacity: 1;
     }
 }
+
+@media(max-width: 475px){
+    .select{
+        max-width: 100%;
+    }
+}
